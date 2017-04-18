@@ -14,9 +14,9 @@
 // system include files
 
 // user include files
-#include "FWCore/Concurrency/interface/SerialTaskQueue.h"
+#include "SerialTaskQueue.h"
 
-#include "FWCore/Utilities/interface/Likely.h"
+#include "Likely.h"
 
 using namespace edm;
 

@@ -1,4 +1,4 @@
-#include "FWCore/Concurrency/interface/ThreadSafeOutputFileStream.h"
+#include "ThreadSafeOutputFileStream.h"
 
 #include <atomic>
 #include <sstream>

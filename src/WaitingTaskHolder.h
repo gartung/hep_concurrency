@@ -22,7 +22,7 @@
 #include <cassert>
 
 // user include files
-#include "FWCore/Concurrency/interface/WaitingTask.h"
+#include "WaitingTask.h"
 
 // forward declarations
 

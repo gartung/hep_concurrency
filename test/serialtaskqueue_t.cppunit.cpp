@@ -13,7 +13,7 @@
 #include <atomic>
 #include <thread>
 #include "tbb/task.h"
-#include "FWCore/Concurrency/interface/SerialTaskQueue.h"
+#include "SerialTaskQueue.h"
 
 class SerialTaskQueue_test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE(SerialTaskQueue_test);
@@ -202,4 +202,4 @@ void SerialTaskQueue_test::stressTest()
 
 
 
-#include <Utilities/Testing/interface/CppUnit_testdriver.icpp>
+#include <CppUnit_testdriver.icpp>

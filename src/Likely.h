@@ -1,6 +1,6 @@
 #ifndef FWCore_Utilities_Likely_h
 #define FWCore_Utilities_Likely_h
-#include "FWCore/Utilities/interface/GCCPrerequisite.h"
+#include "GCCPrerequisite.h"
 
 #if GCC_PREREQUISITE(3,0,0)
 

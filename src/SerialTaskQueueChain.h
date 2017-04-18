@@ -24,7 +24,7 @@
 #include <vector>
 
 // user include files
-#include "FWCore/Concurrency/interface/SerialTaskQueue.h"
+#include "SerialTaskQueue.h"
 
 // forward declarations
 namespace edm {
