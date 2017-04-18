@@ -11,5 +11,4 @@ include_directories(${CPPUNIT_INCLUDE_DIR})
 add_subdirectory(hc)
 add_subdirectory(test)
 
-install(DIRECTORY modules DESTINATION ${CMAKE_INSTALL_PREFIX} )
 install(DIRECTORY hc DESTINATION ${CMAKE_INSTALL_PREFIX}/include FILES_MATCHING PATTERN "*.h*" )
