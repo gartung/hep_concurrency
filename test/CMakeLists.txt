@@ -1,4 +1,5 @@
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+
 add_executable(testHEPConcurrency
   serialtaskqueue_t.cppunit.cpp
   serialtaskqueuechain_t.cppunit.cpp
@@ -14,7 +15,7 @@ target_link_libraries(testHEPConcurrency PUBLIC
   ${CPPUNIT_LIBRARY}
 )
 
-install( TARGETS testHEPConcurrency EXPORT testHEPConcurrency DESTINATION  bin )
+add_test(NAME testHEPConcurrency COMMAND testHEPConcurrency)
 
 add_executable(test_threadSafeOutputFileStream
   test_threadSafeOutputFileStream.cpp
@@ -26,7 +27,7 @@ target_link_libraries(test_threadSafeOutputFileStream PUBLIC
   HEPConcurrency
 )
 
-install( TARGETS test_threadSafeOutputFileStream EXPORT test_threadSafeOutputFileStream DESTINATION  bin )
+add_test(NAME test_threadSafeOutputFileStream COMMAND test_threadSafeOutputFileStream)
 
 add_executable(ThreadSafeAddOnlyContainer_t
   ThreadSafeAddOnlyContainer_t.cpp
@@ -39,6 +40,4 @@ target_link_libraries(ThreadSafeAddOnlyContainer_t PUBLIC
   ${CPPUNIT_LIBRARY}
 )
 
-install( TARGETS ThreadSafeAddOnlyContainer_t EXPORT ThreadSafeAddOnlyContainer_t DESTINATION  bin )
-
-
+add_test(NAME ThreadSafeAddOnlyContainer_t COMMAND ThreadSafeAddOnlyContainer_t)

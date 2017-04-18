@@ -1,4 +1,9 @@
 cmake_minimum_required(VERSION 3.6)
+
+set(BUILD_TESTING ON)
+include(CTest)
+enable_testing()
+
 set(CMAKE_CXX_FLAGS "-std=c++14 -pthread")
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/modules ${CMAKE_MODULE_PATH})
 find_package(TBB)
