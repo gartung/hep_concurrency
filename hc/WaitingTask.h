@@ -1,11 +1,11 @@
-#ifndef FWCore_Concurrency_WaitingTask_h
-#define FWCore_Concurrency_WaitingTask_h
+#ifndef hc_WaitingTask_h
+#define hc_WaitingTask_h
 // -*- C++ -*-
 //
 // Package:     Concurrency
 // Class  :     WaitingTask
 // 
-/**\class WaitingTask WaitingTask.h FWCore/Concurrency/interface/WaitingTask.h
+/**\class WaitingTask WaitingTask.h hc/WaitingTask.h
 
  Description: Task used by WaitingTaskList.
 

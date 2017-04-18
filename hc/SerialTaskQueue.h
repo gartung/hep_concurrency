@@ -1,11 +1,11 @@
-#ifndef FWCore_Concurrency_SerialTaskQueue_h
-#define FWCore_Concurrency_SerialTaskQueue_h
+#ifndef hc_SerialTaskQueue_h
+#define hc_SerialTaskQueue_h
 // -*- C++ -*-
 //
 // Package:     Concurrency
 // Class  :     SerialTaskQueue
 // 
-/**\class SerialTaskQueue SerialTaskQueue.h "FWCore/Concurrency/interface/SerialTaskQueue.h"
+/**\class SerialTaskQueue SerialTaskQueue.h "hc/SerialTaskQueue.h"
 
  Description: Runs only one task from the queue at a time
 

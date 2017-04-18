@@ -1,8 +1,8 @@
-#ifndef FWCore_Concurrency_WaitingTaskHolder_h
-#define FWCore_Concurrency_WaitingTaskHolder_h
+#ifndef hc_WaitingTaskHolder_h
+#define hc_WaitingTaskHolder_h
 // -*- C++ -*-
 //
-// Package:     FWCore/Concurrency
+// Package:     hc/
 // Class  :     WaitingTaskHolder
 // 
 /**\class WaitingTaskHolder WaitingTaskHolder.h "WaitingTaskHolder.h"
@@ -14,8 +14,7 @@
 
 */
 //
-// Original Author:  FWCore
-//         Created:  Fri, 18 Nov 2016 20:30:42 GMT
+// Original Author:  hc //         Created:  Fri, 18 Nov 2016 20:30:42 GMT
 //
 
 // system include files

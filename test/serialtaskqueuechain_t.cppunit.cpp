@@ -42,7 +42,7 @@ void SerialTaskQueueChain_test::testPush()
    std::atomic<unsigned int> count{0};
   
   
-  std::vector<std::shared_ptr<hc::SerialTaskQueue>> queues = {std::make_shared<hc::SerialTaskQueue>(), std::make_shared<edm::SerialTaskQueue>()};
+  std::vector<std::shared_ptr<hc::SerialTaskQueue>> queues = {std::make_shared<hc::SerialTaskQueue>(), std::make_shared<hc::SerialTaskQueue>()};
    hc::SerialTaskQueueChain chain(queues);
    {
       std::shared_ptr<tbb::task> waitTask{new (tbb::task::allocate_root()) tbb::empty_task{},
@@ -118,7 +118,7 @@ void SerialTaskQueueChain_test::testPushAndWait()
 {
    std::atomic<unsigned int> count{0};
    
-   std::vector<std::shared_ptr<hc::SerialTaskQueue>> queues = {std::make_shared<hc::SerialTaskQueue>(), std::make_shared<edm::SerialTaskQueue>()};
+   std::vector<std::shared_ptr<hc::SerialTaskQueue>> queues = {std::make_shared<hc::SerialTaskQueue>(), std::make_shared<hc::SerialTaskQueue>()};
    hc::SerialTaskQueueChain chain(queues);
    {
       chain.push([&count]{
@@ -178,7 +178,7 @@ namespace {
 
 void SerialTaskQueueChain_test::stressTest()
 {
-   std::vector<std::shared_ptr<hc::SerialTaskQueue>> queues = {std::make_shared<hc::SerialTaskQueue>(), std::make_shared<edm::SerialTaskQueue>()};
+   std::vector<std::shared_ptr<hc::SerialTaskQueue>> queues = {std::make_shared<hc::SerialTaskQueue>(), std::make_shared<hc::SerialTaskQueue>()};
 
    hc::SerialTaskQueueChain chain(queues);
    

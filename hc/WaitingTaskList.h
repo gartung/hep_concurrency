@@ -1,11 +1,11 @@
-#ifndef FWCore_Concurrency_WaitingTaskList_h
-#define FWCore_Concurrency_WaitingTaskList_h
+#ifndef hc_WaitingTaskList_h
+#define hc_WaitingTaskList_h
 // -*- C++ -*-
 //
 // Package:     Concurrency
 // Class  :     WaitingTaskList
 // 
-/**\class WaitingTaskList WaitingTaskList.h FWCore/Concurrency/interface/WaitingTaskList.h
+/**\class WaitingTaskList WaitingTaskList.h hc/WaitingTaskList.h
 
  Description: Handles starting tasks once some resource becomes available.
 
@@ -167,7 +167,7 @@ namespace hc {
       // ---------- member data --------------------------------
       std::atomic<WaitNode*> m_head;
       std::unique_ptr<WaitNode[]> m_nodeCache;
-      CMS_THREAD_GUARD(m_waiting) std::exception_ptr m_exceptionPtr;
+      HC_THREAD_GUARD(m_waiting) std::exception_ptr m_exceptionPtr;
       unsigned int m_nodeCacheSize;
       std::atomic<unsigned int> m_lastAssignedCacheIndex;
       std::atomic<bool> m_waiting;    

@@ -1,11 +1,11 @@
-#ifndef FWCore_Concurrency_hardware_pause_h
-#define FWCore_Concurrency_hardware_pause_h
+#ifndef hc_hardware_pause_h
+#define hc_hardware_pause_h
 // -*- C++ -*-
 //
 // Package:     Concurrency
 // Class  :     hardware_pause
 // 
-/**\class hardware_pause hardware_pause.h FWCore/Concurrency/interface/hardware_pause.h
+/**\class hardware_pause hardware_pause.h hc/hardware_pause.h
 
  Description: assembler instruction to allow a short pause
 

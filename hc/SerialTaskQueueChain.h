@@ -1,8 +1,8 @@
-#ifndef FWCore_Concurrency_SerialTaskQueueChain_h
-#define FWCore_Concurrency_SerialTaskQueueChain_h
+#ifndef hc_SerialTaskQueueChain_h
+#define hc_SerialTaskQueueChain_h
 // -*- C++ -*-
 //
-// Package:     FWCore/Concurrency
+// Package:     hc/
 // Class  :     SerialTaskQueueChain
 // 
 /**\class SerialTaskQueueChain SerialTaskQueueChain.h "SerialTaskQueueChain.h"

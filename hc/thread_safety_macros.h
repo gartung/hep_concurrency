@@ -1,10 +1,10 @@
-#ifndef FWCore_Utilites_thread_safe_macros_h 
-#define FWCore_Utilites_thread_safe_macros_h 
+#ifndef hc_thread_safe_macros_h 
+#define hc_thread_safe_macros_h 
 #ifndef __ROOTCLING__
-#define CMS_THREAD_SAFE [[cms::thread_safe]]
-#define CMS_THREAD_GUARD(_var_) [[cms::thread_guard("#_var_")]]
+#define HC_THREAD_SAFE [[hc::thread_safe]]
+#define HC_THREAD_GUARD(_var_) [[hc::thread_guard("#_var_")]]
 #else 
-#define CMS_THREAD_SAFE
-#define CMS_THREAD_GUARD(_var_)
+#define HC_THREAD_SAFE
+#define HC_THREAD_GUARD(_var_)
 #endif
 #endif

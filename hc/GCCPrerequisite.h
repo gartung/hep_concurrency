@@ -1,5 +1,5 @@
-#ifndef FWCore_Utilities_GCCPrerequisite_h
-#define FWCore_Utilities_GCCPrerequisite_h
+#ifndef hc_GCCPrerequisite_h
+#define hc_GCCPrerequisite_h
 
 /* Convenience macro to test the version of gcc.
    Use it like this:

@@ -1,5 +1,5 @@
-#ifndef FWCore_Concurrency_ThreadSafeAddOnlyContainer_h
-#define FWCore_Concurrency_ThreadSafeAddOnlyContainer_h
+#ifndef hc_ThreadSafeAddOnlyContainer_h
+#define hc_ThreadSafeAddOnlyContainer_h
 
 #include <atomic>
 #include <utility>
