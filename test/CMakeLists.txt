@@ -40,24 +40,4 @@ target_link_libraries(ThreadSafeAddOnlyContainer_t PUBLIC
 
 install( TARGETS ThreadSafeAddOnlyContainer_t EXPORT ThreadSafeAddOnlyContainer_t DESTINATION  bin )
 
-add_executable(TestFWCoreConcurrencyDriver
-  TestFWCoreConcurrencyDriver.cpp
-  TestHelper.cc
-  EDMException.cc
-  Exception.cc
-  RegexMatch.cc
-)
-
-target_include_directories(TestFWCoreConcurrencyDriver PUBLIC ${Boost_INCLUDE_DIR})
-include_directories(TestFWCoreConcurrencyDriver PUBLIC ${Boost_INCLUDE_DIR})
-target_include_directories(TestFWCoreConcurrencyDriver PUBLIC ${TBB_INCLUDE_DIRS})
-include_directories(TestFWCoreConcurrencyDriver PUBLIC ${TBB_INCLUDE_DIRS})
-target_include_directories(TestFWCoreConcurrencyDriver PUBLIC ${MD5_INCLUDE_DIR})
-target_link_libraries(TestFWCoreConcurrencyDriver PUBLIC
-  FWCoreConcurrency
-  ${Boost_FILESYSTEM_LIBRARY_RELEASE}  
-  ${Boost_SYSTEM_LIBRARY_RELEASE}
-)
-
-install( TARGETS TestFWCoreConcurrencyDriver EXPORT TestFWCoreConcurrencyDriver DESTINATION  bin )
 
