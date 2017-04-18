@@ -13,7 +13,7 @@
 #include <atomic>
 #include <thread>
 #include "tbb/task.h"
-#include "WaitingTaskList.h"
+#include "hc/WaitingTaskList.h"
 
 #if __GNUC__ > 4 || (__GNUC__ == 4 && __GNUC_MINOR__ >= 7)
 #define CXX_THREAD_AVAILABLE

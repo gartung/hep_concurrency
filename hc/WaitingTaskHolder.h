@@ -22,7 +22,7 @@
 #include <cassert>
 
 // user include files
-#include "WaitingTask.h"
+#include "hc/WaitingTask.h"
 
 // forward declarations
 

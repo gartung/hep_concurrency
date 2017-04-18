@@ -14,9 +14,9 @@
 // system include files
 
 // user include files
-#include "SerialTaskQueue.h"
+#include "hc/SerialTaskQueue.h"
 
-#include "Likely.h"
+#include "hc/Likely.h"
 
 using namespace edm;
 

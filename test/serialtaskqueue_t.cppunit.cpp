@@ -13,7 +13,7 @@
 #include <atomic>
 #include <thread>
 #include "tbb/task.h"
-#include "SerialTaskQueue.h"
+#include "hc/SerialTaskQueue.h"
 
 class SerialTaskQueue_test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE(SerialTaskQueue_test);

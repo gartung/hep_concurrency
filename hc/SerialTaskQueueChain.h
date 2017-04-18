@@ -24,7 +24,7 @@
 #include <vector>
 
 // user include files
-#include "SerialTaskQueue.h"
+#include "hc/SerialTaskQueue.h"
 
 // forward declarations
 namespace edm {

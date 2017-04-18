@@ -17,8 +17,8 @@
 #include "tbb/task.h"
 #include <cassert>
 
-#include "WaitingTaskList.h"
-#include "hardware_pause.h"
+#include "hc/WaitingTaskList.h"
+#include "hc/hardware_pause.h"
 
 using namespace edm;
 //

@@ -1,4 +1,4 @@
-#include "FWCore/Concurrency/interface/ThreadSafeAddOnlyContainer.h"
+#include "hc/ThreadSafeAddOnlyContainer.h"
 
 #include <iostream>
 #include <string>

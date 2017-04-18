@@ -1,4 +1,4 @@
-#include "ThreadSafeOutputFileStream.h"
+#include "hc/ThreadSafeOutputFileStream.h"
 
 #include <sstream>
 
