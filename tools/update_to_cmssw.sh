@@ -27,6 +27,8 @@ function one_file() {
   (( ${fix_whitespace:-0} )) && ed "$F" < fix-whitespace.ed > /dev/null 2>&1
   # Fix includes 
   perl -wapi\~ -f ${thisdir}/fix-header-locs-to-cmssw.pl "${F}" >/dev/null 2>&1 && rm -f "${F}~"
+  perl -pi\~ -e "s/namespace\s+hc/namespace edm/"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
+
 }
 
 # ======================================================================

@@ -20,7 +20,7 @@
 #include "hc/WaitingTaskList.h"
 #include "hc/hardware_pause.h"
 
-using namespace edm;
+using namespace hc;
 //
 // constants, enums and typedefs
 //

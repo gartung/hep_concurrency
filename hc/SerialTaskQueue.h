@@ -21,7 +21,7 @@
  Example: Imagine we have the following data structures.
  \code
  std::vector<int> values;
- edm::SerialTaskQueue queue;
+ hc::SerialTaskQueue queue;
  \endcode
 
  On thread 1 we can fill the vector
@@ -61,7 +61,7 @@
 // user include files
 
 // forward declarations
-namespace edm {
+namespace hc {
    class SerialTaskQueue
    {
    public:

@@ -7,7 +7,7 @@
 #include <fstream>
 #include <string>
 
-namespace edm {
+namespace hc {
   class ThreadSafeOutputFileStream {
   public:
     ThreadSafeOutputFileStream(std::string const& name);

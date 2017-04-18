@@ -2,7 +2,7 @@
 
 #include <sstream>
 
-namespace edm {
+namespace hc {
 
   ThreadSafeOutputFileStream::ThreadSafeOutputFileStream(std::string const& name)
     : file_{name}

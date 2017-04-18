@@ -10,7 +10,7 @@ namespace {
   std::atomic<int> nWaitingForThreads {};
 
   void
-  logToFile(unsigned const thread_index, edm::ThreadSafeOutputFileStream& f)
+  logToFile(unsigned const thread_index, hc::ThreadSafeOutputFileStream& f)
   {
     --nWaitingForThreads;
     while (nWaitingForThreads != 0);  // Spin until all threads have been launched.
@@ -26,7 +26,7 @@ namespace {
 
 int main()
 {
-  edm::ThreadSafeOutputFileStream f {"thread_safe_ofstream_test.txt"};
+  hc::ThreadSafeOutputFileStream f {"thread_safe_ofstream_test.txt"};
   std::vector<std::thread> threads;
   unsigned const nThreads {3};
   nWaitingForThreads = nThreads;

@@ -26,7 +26,7 @@
 
 // forward declarations
 
-namespace edm {
+namespace hc {
   class WaitingTaskHolder
   {
     
@@ -34,7 +34,7 @@ namespace edm {
     WaitingTaskHolder():
     m_task(nullptr) {}
     
-    explicit WaitingTaskHolder(edm::WaitingTask* iTask):
+    explicit WaitingTaskHolder(hc::WaitingTask* iTask):
     m_task(iTask)
     {m_task->increment_ref_count();}
     ~WaitingTaskHolder() {

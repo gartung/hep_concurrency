@@ -28,7 +28,7 @@
 
 // forward declarations
 
-namespace edm {
+namespace hc {
   class WaitingTaskList;
   class WaitingTaskHolder;
   

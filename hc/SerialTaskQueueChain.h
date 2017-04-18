@@ -27,7 +27,7 @@
 #include "hc/SerialTaskQueue.h"
 
 // forward declarations
-namespace edm {
+namespace hc {
   class SerialTaskQueueChain
   {
     

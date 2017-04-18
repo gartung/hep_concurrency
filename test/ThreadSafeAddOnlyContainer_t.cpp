@@ -25,12 +25,12 @@ namespace {
 
 int main() {
 
-  edm::ThreadSafeAddOnlyContainer<int> container1;
+  hc::ThreadSafeAddOnlyContainer<int> container1;
   int* ptr1 = container1.makeAndHold(11);
   // std::cout << *ptr1 << std::endl;
   if (*ptr1 != 11) abort();
 
-  edm::ThreadSafeAddOnlyContainer<X<std::string,int> > container2;
+  hc::ThreadSafeAddOnlyContainer<X<std::string,int> > container2;
   X<std::string, int>* ptr2 = container2.makeAndHold(std::string("FOO"), 11, 21.0);
   // std::cout << ptr2->a_ << " " << ptr2->b_ << " " << ptr2->c_ << std::endl;
   if (ptr2->a_ != "FOO" || ptr2->b_ != 11 || ptr2->c_ != 21.0) abort();
@@ -40,9 +40,9 @@ int main() {
   // std::cout << ptr3->a_ << " " << ptr3->b_ << " " << ptr3->c_ << std::endl;
   if (ptr3->a_ != "BAR" || ptr3->b_ != 111 || ptr3->c_ != 121.0) abort();
 
-  edm::ThreadSafeAddOnlyContainer<X<std::string,int> > container3;
+  hc::ThreadSafeAddOnlyContainer<X<std::string,int> > container3;
 
-  edm::ThreadSafeAddOnlyContainer<Y> container4;
+  hc::ThreadSafeAddOnlyContainer<Y> container4;
   container4.makeAndHold();
   container4.makeAndHold();
 

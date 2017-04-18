@@ -22,9 +22,9 @@
  then several other tasks have been created in a different thread and before running those
  new tasks you need the result of the long calculation.
  \code
- class CalcTask : public edm::WaitingTask {
+ class CalcTask : public hc::WaitingTask {
     public:
-    CalcTask(edm::WaitingTaskList* iWL, Value* v):
+    CalcTask(hc::WaitingTaskList* iWL, Value* v):
     m_waitList(iWL), m_output(v) {}
  
     tbb::task* execute() {
@@ -38,7 +38,7 @@
      return nullptr;
     }
     private:
-     edm::WaitingTaskList* m_waitList;
+     hc::WaitingTaskList* m_waitList;
      Value* m_output;
  };
  \endcode
@@ -79,7 +79,7 @@
 
 // forward declarations
 
-namespace edm {
+namespace hc {
    class EmptyWaitingTask : public WaitingTask {
    public:
       EmptyWaitingTask() = default;
@@ -95,8 +95,8 @@ namespace edm {
       };
    }
    ///Create an EmptyWaitingTask which will properly be destroyed
-   inline std::unique_ptr<edm::EmptyWaitingTask, waitingtask::TaskDestroyer> make_empty_waiting_task() {
-      return std::unique_ptr<edm::EmptyWaitingTask, waitingtask::TaskDestroyer>( new (tbb::task::allocate_root()) edm::EmptyWaitingTask{});
+   inline std::unique_ptr<hc::EmptyWaitingTask, waitingtask::TaskDestroyer> make_empty_waiting_task() {
+      return std::unique_ptr<hc::EmptyWaitingTask, waitingtask::TaskDestroyer>( new (tbb::task::allocate_root()) hc::EmptyWaitingTask{});
    }
 
    class WaitingTaskList

@@ -18,7 +18,7 @@
 
 #include "hc/Likely.h"
 
-using namespace edm;
+using namespace hc;
 
 //
 // member functions
