@@ -21,7 +21,7 @@
 #include <cassert>
 
 // user include files
-#include "hc/WaitingTask.h"
+#include "hep_concurrency/WaitingTask.h"
 
 // forward declarations
 

@@ -14,9 +14,9 @@
 // system include files
 
 // user include files
-#include "hc/SerialTaskQueue.h"
+#include "hep_concurrency/SerialTaskQueue.h"
 
-#include "hc/Likely.h"
+#include "hep_concurrency/Likely.h"
 
 using namespace hc;
 

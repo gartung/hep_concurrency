@@ -13,7 +13,7 @@ include_directories(${CMAKE_SOURCE_DIR})
 include_directories(${TBB_INCLUDE_DIRS})
 include_directories(${CPPUNIT_INCLUDE_DIR})
 
-add_subdirectory(hc)
+add_subdirectory(hep_concurrency)
 add_subdirectory(test)
 
-install(DIRECTORY hc DESTINATION ${CMAKE_INSTALL_PREFIX}/include FILES_MATCHING PATTERN "*.h*" )
+install(DIRECTORY hep_concurrency DESTINATION ${CMAKE_INSTALL_PREFIX}/include FILES_MATCHING PATTERN "*.h*" )

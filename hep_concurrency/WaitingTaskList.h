@@ -74,8 +74,8 @@
 #include <atomic>
 
 // user include files
-#include "hc/WaitingTask.h"
-#include "hc/thread_safety_macros.h"
+#include "hep_concurrency/WaitingTask.h"
+#include "hep_concurrency/thread_safety_macros.h"
 
 // forward declarations
 

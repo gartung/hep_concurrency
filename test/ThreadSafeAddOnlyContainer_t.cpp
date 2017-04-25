@@ -1,4 +1,4 @@
-#include "hc/ThreadSafeAddOnlyContainer.h"
+#include "hep_concurrency/ThreadSafeAddOnlyContainer.h"
 
 #include <iostream>
 #include <string>

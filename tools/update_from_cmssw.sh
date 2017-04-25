@@ -27,15 +27,15 @@ function one_file() {
   (( ${fix_whitespace:-0} )) && ed "$F" < fix-whitespace.ed > /dev/null 2>&1
   # Fix includes 
   perl -wapi\~ -f ${thisdir}/fix-header-locs-from-cmssw.pl "${F}" >/dev/null 2>&1 && rm -f "${F}~"
-  perl -pi\~ -e "s/edm::/hc::/"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
-  perl -pi\~ -e "s/cms::/hc::/"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
+  perl -pi\~ -e "s/edm::/hep_concurrency::/"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
+  perl -pi\~ -e "s/cms::/hep_concurrency::/"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
   perl -pi\~ -e "s/namespace\s+edm/namespace hc/"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
-  perl -pi\~ -e "s/\sFWCore\s/ hc /"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
-  perl -pi\~ -e "s/FWCore_Concurrency_/hc_/"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
+  perl -pi\~ -e "s/\sFWCore\s/ hep_concurrency /"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
+  perl -pi\~ -e "s/FWCore_Concurrency_/hep_concurrency_/"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
   perl -pi\~ -e "s/CMS_/HC_/"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
-  perl -pi\~ -e "s/FWCore_Utilities_/hc_/"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
-  perl -pi\~ -e "s&FWCore/Concurrency&hc&"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
-  perl -pi\~ -e "s&FWCore/Concurrency/interface&hc&"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
+  perl -pi\~ -e "s/FWCore_Utilities_/hep_concurrency_/"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
+  perl -pi\~ -e "s&FWCore/Concurrency&hep_concurrency&"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
+  perl -pi\~ -e "s&FWCore/Concurrency/interface&hep_concurrency&"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
 }
 
 # ======================================================================

@@ -14,7 +14,7 @@
 #include <thread>
 #include <iostream>
 #include "tbb/task.h"
-#include "hc/SerialTaskQueueChain.h"
+#include "hep_concurrency/SerialTaskQueueChain.h"
 
 class SerialTaskQueueChain_test : public CppUnit::TestFixture {
   CPPUNIT_TEST_SUITE(SerialTaskQueueChain_test);

@@ -24,7 +24,7 @@
 #include <vector>
 
 // user include files
-#include "hc/SerialTaskQueue.h"
+#include "hep_concurrency/SerialTaskQueue.h"
 
 // forward declarations
 namespace hc {

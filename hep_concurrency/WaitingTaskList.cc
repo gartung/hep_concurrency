@@ -17,8 +17,8 @@
 #include "tbb/task.h"
 #include <cassert>
 
-#include "hc/WaitingTaskList.h"
-#include "hc/hardware_pause.h"
+#include "hep_concurrency/WaitingTaskList.h"
+#include "hep_concurrency/hardware_pause.h"
 
 using namespace hc;
 //
