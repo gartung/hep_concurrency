@@ -2,7 +2,7 @@
 
 #include <sstream>
 
-namespace hc {
+namespace hep_concurrency {
 
   ThreadSafeOutputFileStream::ThreadSafeOutputFileStream(std::string const& name)
     : file_{name}

@@ -32,11 +32,13 @@ function one_file() {
   perl -pi\~ -e "s/namespace\s+edm/namespace hep_concurrency/"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
   perl -pi\~ -e "s/\sFWCore\s/ hep_concurrency /"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
   perl -pi\~ -e "s/FWCore_Concurrency_/hep_concurrency_/"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
+  perl -pi\~ -e "s/FWCore_Utilities_/hep_concurrency_/"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
   perl -pi\~ -e "s/cms_/hep_concurrency_/"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
   perl -pi\~ -e "s/CMS_/HEP_CONCURRENCY_/"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
   perl -pi\~ -e "s/FWCore_Utilities_/hep_concurrency_/"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
   perl -pi\~ -e "s&FWCore/Concurrency&hep_concurrency&"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
   perl -pi\~ -e "s&FWCore/Concurrency/interface&hep_concurrency&"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
+  perl -pi\~ -e "s&FWCore/Utilities/interface&hep_concurrency&"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
 }
 
 # ======================================================================

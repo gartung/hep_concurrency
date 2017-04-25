@@ -2,7 +2,7 @@
 #define hep_concurrency_SerialTaskQueueChain_h
 // -*- C++ -*-
 //
-// Package:     hc/
+// Package:     hep_concurrency
 // Class  :     SerialTaskQueueChain
 // 
 /**\class SerialTaskQueueChain SerialTaskQueueChain.h "SerialTaskQueueChain.h"
@@ -27,7 +27,7 @@
 #include "hep_concurrency/SerialTaskQueue.h"
 
 // forward declarations
-namespace hc {
+namespace hep_concurrency {
   class SerialTaskQueueChain
   {
     

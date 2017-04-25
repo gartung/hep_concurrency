@@ -2,7 +2,7 @@
 #define hep_concurrency_WaitingTaskHolder_h
 // -*- C++ -*-
 //
-// Package:     hc/
+// Package:     hep_concurrency
 // Class  :     WaitingTaskHolder
 // 
 /**\class WaitingTaskHolder WaitingTaskHolder.h "WaitingTaskHolder.h"
@@ -14,7 +14,7 @@
 
 */
 //
-// Original Author:  hc //         Created:  Fri, 18 Nov 2016 20:30:42 GMT
+// Original Author:  hep_concurrency //         Created:  Fri, 18 Nov 2016 20:30:42 GMT
 //
 
 // system include files
@@ -25,7 +25,7 @@
 
 // forward declarations
 
-namespace hc {
+namespace hep_concurrency {
   class WaitingTaskHolder
   {
     
@@ -33,7 +33,7 @@ namespace hc {
     WaitingTaskHolder():
     m_task(nullptr) {}
     
-    explicit WaitingTaskHolder(hc::WaitingTask* iTask):
+    explicit WaitingTaskHolder(hep_concurrency::WaitingTask* iTask):
     m_task(iTask)
     {m_task->increment_ref_count();}
     ~WaitingTaskHolder() {

@@ -42,8 +42,8 @@ void SerialTaskQueueChain_test::testPush()
    std::atomic<unsigned int> count{0};
   
   
-  std::vector<std::shared_ptr<hc::SerialTaskQueue>> queues = {std::make_shared<hc::SerialTaskQueue>(), std::make_shared<hc::SerialTaskQueue>()};
-   hc::SerialTaskQueueChain chain(queues);
+  std::vector<std::shared_ptr<hep_concurrency::SerialTaskQueue>> queues = {std::make_shared<hep_concurrency::SerialTaskQueue>(), std::make_shared<hep_concurrency::SerialTaskQueue>()};
+   hep_concurrency::SerialTaskQueueChain chain(queues);
    {
       std::shared_ptr<tbb::task> waitTask{new (tbb::task::allocate_root()) tbb::empty_task{},
                                             [](tbb::task* iTask){tbb::task::destroy(*iTask);} };
@@ -80,8 +80,8 @@ void SerialTaskQueueChain_test::testPushOne()
   std::atomic<unsigned int> count{0};
   
   
-  std::vector<std::shared_ptr<hc::SerialTaskQueue>> queues = {std::make_shared<hc::SerialTaskQueue>()};
-  hc::SerialTaskQueueChain chain(queues);
+  std::vector<std::shared_ptr<hep_concurrency::SerialTaskQueue>> queues = {std::make_shared<hep_concurrency::SerialTaskQueue>()};
+  hep_concurrency::SerialTaskQueueChain chain(queues);
   {
     std::shared_ptr<tbb::task> waitTask{new (tbb::task::allocate_root()) tbb::empty_task{},
       [](tbb::task* iTask){tbb::task::destroy(*iTask);} };
@@ -118,8 +118,8 @@ void SerialTaskQueueChain_test::testPushAndWait()
 {
    std::atomic<unsigned int> count{0};
    
-   std::vector<std::shared_ptr<hc::SerialTaskQueue>> queues = {std::make_shared<hc::SerialTaskQueue>(), std::make_shared<hc::SerialTaskQueue>()};
-   hc::SerialTaskQueueChain chain(queues);
+   std::vector<std::shared_ptr<hep_concurrency::SerialTaskQueue>> queues = {std::make_shared<hep_concurrency::SerialTaskQueue>(), std::make_shared<hep_concurrency::SerialTaskQueue>()};
+   hep_concurrency::SerialTaskQueueChain chain(queues);
    {
       chain.push([&count]{
          CPPUNIT_ASSERT(count++ == 0);
@@ -146,8 +146,8 @@ void SerialTaskQueueChain_test::testPushAndWaitOne()
 {
   std::atomic<unsigned int> count{0};
   
-  std::vector<std::shared_ptr<hc::SerialTaskQueue>> queues = {std::make_shared<hc::SerialTaskQueue>()};
-  hc::SerialTaskQueueChain chain(queues);
+  std::vector<std::shared_ptr<hep_concurrency::SerialTaskQueue>> queues = {std::make_shared<hep_concurrency::SerialTaskQueue>()};
+  hep_concurrency::SerialTaskQueueChain chain(queues);
   {
     chain.push([&count]{
       CPPUNIT_ASSERT(count++ == 0);
@@ -178,9 +178,9 @@ namespace {
 
 void SerialTaskQueueChain_test::stressTest()
 {
-   std::vector<std::shared_ptr<hc::SerialTaskQueue>> queues = {std::make_shared<hc::SerialTaskQueue>(), std::make_shared<hc::SerialTaskQueue>()};
+   std::vector<std::shared_ptr<hep_concurrency::SerialTaskQueue>> queues = {std::make_shared<hep_concurrency::SerialTaskQueue>(), std::make_shared<hep_concurrency::SerialTaskQueue>()};
 
-   hc::SerialTaskQueueChain chain(queues);
+   hep_concurrency::SerialTaskQueueChain chain(queues);
    
    unsigned int index = 100;
    const unsigned int nTasks = 1000;

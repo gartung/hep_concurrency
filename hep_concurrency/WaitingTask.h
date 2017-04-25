@@ -5,7 +5,7 @@
 // Package:     Concurrency
 // Class  :     WaitingTask
 // 
-/**\class WaitingTask WaitingTask.h hc/WaitingTask.h
+/**\class WaitingTask WaitingTask.h hep_concurrency/WaitingTask.h
 
  Description: Task used by WaitingTaskList.
 
@@ -28,7 +28,7 @@
 
 // forward declarations
 
-namespace hc {
+namespace hep_concurrency {
   class WaitingTaskList;
   class WaitingTaskHolder;
   

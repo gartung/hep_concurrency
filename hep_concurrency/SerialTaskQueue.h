@@ -5,7 +5,7 @@
 // Package:     Concurrency
 // Class  :     SerialTaskQueue
 // 
-/**\class SerialTaskQueue SerialTaskQueue.h "hc/SerialTaskQueue.h"
+/**\class SerialTaskQueue SerialTaskQueue.h "hep_concurrency/SerialTaskQueue.h"
 
  Description: Runs only one task from the queue at a time
 
@@ -21,7 +21,7 @@
  Example: Imagine we have the following data structures.
  \code
  std::vector<int> values;
- hc::SerialTaskQueue queue;
+ hep_concurrency::SerialTaskQueue queue;
  \endcode
 
  On thread 1 we can fill the vector
@@ -61,7 +61,7 @@
 // user include files
 
 // forward declarations
-namespace hc {
+namespace hep_concurrency {
    class SerialTaskQueue
    {
    public:

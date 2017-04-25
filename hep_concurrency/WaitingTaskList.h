@@ -5,7 +5,7 @@
 // Package:     Concurrency
 // Class  :     WaitingTaskList
 // 
-/**\class WaitingTaskList WaitingTaskList.h hc/WaitingTaskList.h
+/**\class WaitingTaskList WaitingTaskList.h hep_concurrency/WaitingTaskList.h
 
  Description: Handles starting tasks once some resource becomes available.
 
@@ -22,9 +22,9 @@
  then several other tasks have been created in a different thread and before running those
  new tasks you need the result of the long calculation.
  \code
- class CalcTask : public hc::WaitingTask {
+ class CalcTask : public hep_concurrency::WaitingTask {
     public:
-    CalcTask(hc::WaitingTaskList* iWL, Value* v):
+    CalcTask(hep_concurrency::WaitingTaskList* iWL, Value* v):
     m_waitList(iWL), m_output(v) {}
  
     tbb::task* execute() {
@@ -38,7 +38,7 @@
      return nullptr;
     }
     private:
-     hc::WaitingTaskList* m_waitList;
+     hep_concurrency::WaitingTaskList* m_waitList;
      Value* m_output;
  };
  \endcode
@@ -79,7 +79,7 @@
 
 // forward declarations
 
-namespace hc {
+namespace hep_concurrency {
    class EmptyWaitingTask : public WaitingTask {
    public:
       EmptyWaitingTask() = default;
@@ -95,8 +95,8 @@ namespace hc {
       };
    }
    ///Create an EmptyWaitingTask which will properly be destroyed
-   inline std::unique_ptr<hc::EmptyWaitingTask, waitingtask::TaskDestroyer> make_empty_waiting_task() {
-      return std::unique_ptr<hc::EmptyWaitingTask, waitingtask::TaskDestroyer>( new (tbb::task::allocate_root()) hc::EmptyWaitingTask{});
+   inline std::unique_ptr<hep_concurrency::EmptyWaitingTask, waitingtask::TaskDestroyer> make_empty_waiting_task() {
+      return std::unique_ptr<hep_concurrency::EmptyWaitingTask, waitingtask::TaskDestroyer>( new (tbb::task::allocate_root()) hep_concurrency::EmptyWaitingTask{});
    }
 
    class WaitingTaskList

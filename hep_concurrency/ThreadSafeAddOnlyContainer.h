@@ -25,7 +25,7 @@
 // storage we were able to only store a simple pointer. There may be
 // other uses for this.
 
-namespace hc {
+namespace hep_concurrency {
 
   template <typename T>
   class ThreadSafeAddOnlyContainer {

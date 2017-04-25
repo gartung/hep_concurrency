@@ -39,7 +39,7 @@ public:
 };
 
 namespace  {
-   class TestCalledTask : public hc::WaitingTask {
+   class TestCalledTask : public hep_concurrency::WaitingTask {
    public:
      TestCalledTask(std::atomic<bool>& iCalled, std::exception_ptr& iPtr): m_called(iCalled), m_ptr(iPtr) {}
 
@@ -56,7 +56,7 @@ namespace  {
       std::exception_ptr& m_ptr;
    };
    
-   class TestValueSetTask : public hc::WaitingTask {
+   class TestValueSetTask : public hep_concurrency::WaitingTask {
    public:
       TestValueSetTask(std::atomic<bool>& iValue): m_value(iValue) {}
          tbb::task* execute() {
@@ -75,9 +75,9 @@ void WaitingTaskList_test::addThenDone()
    std::atomic<bool> called{false};
    std::exception_ptr excPtr;
   
-   hc::WaitingTaskList waitList;
+   hep_concurrency::WaitingTaskList waitList;
    {
-      auto waitTask = hc::make_empty_waiting_task();
+      auto waitTask = hep_concurrency::make_empty_waiting_task();
       waitTask->set_ref_count(2);
       //NOTE: allocate_child does NOT increment the ref_count of waitTask!
       auto t = new (waitTask->allocate_child()) TestCalledTask{called,excPtr};
@@ -101,7 +101,7 @@ void WaitingTaskList_test::addThenDone()
    {
       std::exception_ptr excPtr;
 
-      auto waitTask = hc::make_empty_waiting_task();
+      auto waitTask = hep_concurrency::make_empty_waiting_task();
       waitTask->set_ref_count(2);
    
       auto t = new (waitTask->allocate_child()) TestCalledTask{called, excPtr};
@@ -123,9 +123,9 @@ void WaitingTaskList_test::doneThenAdd()
    std::atomic<bool> called{false};
    std::exception_ptr excPtr;
 
-   hc::WaitingTaskList waitList;
+   hep_concurrency::WaitingTaskList waitList;
    {
-      auto waitTask = hc::make_empty_waiting_task();
+      auto waitTask = hep_concurrency::make_empty_waiting_task();
       waitTask->set_ref_count(2);
    
       auto t = new (waitTask->allocate_child()) TestCalledTask{called,excPtr};
@@ -144,11 +144,11 @@ void WaitingTaskList_test::addThenDoneFailed()
   std::atomic<bool> called{false};
   std::exception_ptr excPtr;
   
-  hc::WaitingTaskList waitList;
+  hep_concurrency::WaitingTaskList waitList;
   {
     std::exception_ptr excPtr;
     
-    auto waitTask = hc::make_empty_waiting_task();
+    auto waitTask = hep_concurrency::make_empty_waiting_task();
     waitTask->set_ref_count(2);
     
     auto t = new (waitTask->allocate_child()) TestCalledTask{called, excPtr};
@@ -170,9 +170,9 @@ void WaitingTaskList_test::doneThenAddFailed()
   std::atomic<bool> called{false};
   std::exception_ptr excPtr;
   
-  hc::WaitingTaskList waitList;
+  hep_concurrency::WaitingTaskList waitList;
   {
-    auto waitTask = hc::make_empty_waiting_task();
+    auto waitTask = hep_concurrency::make_empty_waiting_task();
     waitTask->set_ref_count(2);
     
     auto t = new (waitTask->allocate_child()) TestCalledTask{called,excPtr};
@@ -199,13 +199,13 @@ void WaitingTaskList_test::stressTest()
 #if defined(CXX_THREAD_AVAILABLE)
    std::atomic<bool> called{false};
    std::exception_ptr excPtr;
-   hc::WaitingTaskList waitList;
+   hep_concurrency::WaitingTaskList waitList;
    
    unsigned int index = 1000;
    const unsigned int nTasks = 10000;
    while(0 != --index) {
       called = false;
-      auto waitTask = hc::make_empty_waiting_task();
+      auto waitTask = hep_concurrency::make_empty_waiting_task();
       waitTask->set_ref_count(3);
       tbb::task* pWaitTask=waitTask.get();
       

@@ -38,7 +38,7 @@ void SerialTaskQueue_test::testPush()
 {
    std::atomic<unsigned int> count{0};
    
-   hc::SerialTaskQueue queue;
+   hep_concurrency::SerialTaskQueue queue;
    {
       std::shared_ptr<tbb::task> waitTask{new (tbb::task::allocate_root()) tbb::empty_task{},
                                             [](tbb::task* iTask){tbb::task::destroy(*iTask);} };
@@ -73,7 +73,7 @@ void SerialTaskQueue_test::testPushAndWait()
 {
    std::atomic<unsigned int> count{0};
    
-   hc::SerialTaskQueue queue;
+   hep_concurrency::SerialTaskQueue queue;
    {
       queue.push([&count]{
          CPPUNIT_ASSERT(count++ == 0);
@@ -98,7 +98,7 @@ void SerialTaskQueue_test::testPause()
 {
    std::atomic<unsigned int> count{0};
    
-   hc::SerialTaskQueue queue;
+   hep_concurrency::SerialTaskQueue queue;
    {
       queue.pause();
       {
@@ -156,7 +156,7 @@ namespace {
 
 void SerialTaskQueue_test::stressTest()
 {
-   hc::SerialTaskQueue queue;
+   hep_concurrency::SerialTaskQueue queue;
    
    unsigned int index = 100;
    const unsigned int nTasks = 1000;

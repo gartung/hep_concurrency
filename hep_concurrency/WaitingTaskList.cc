@@ -20,7 +20,7 @@
 #include "hep_concurrency/WaitingTaskList.h"
 #include "hep_concurrency/hardware_pause.h"
 
-using namespace hc;
+using namespace hep_concurrency;
 //
 // constants, enums and typedefs
 //

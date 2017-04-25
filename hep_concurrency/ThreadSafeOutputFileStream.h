@@ -7,7 +7,7 @@
 #include <fstream>
 #include <string>
 
-namespace hc {
+namespace hep_concurrency {
   class ThreadSafeOutputFileStream {
   public:
     ThreadSafeOutputFileStream(std::string const& name);

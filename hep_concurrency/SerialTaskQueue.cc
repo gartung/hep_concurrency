@@ -18,7 +18,7 @@
 
 #include "hep_concurrency/Likely.h"
 
-using namespace hc;
+using namespace hep_concurrency;
 
 //
 // member functions
