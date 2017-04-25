@@ -1,5 +1,5 @@
-#ifndef hc_WaitingTaskHolder_h
-#define hc_WaitingTaskHolder_h
+#ifndef hep_concurrency_WaitingTaskHolder_h
+#define hep_concurrency_WaitingTaskHolder_h
 // -*- C++ -*-
 //
 // Package:     hc/

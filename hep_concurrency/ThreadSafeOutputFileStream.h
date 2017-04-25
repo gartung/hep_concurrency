@@ -1,5 +1,5 @@
-#ifndef hc_ThreadSafeOutputFileStream_h
-#define hc_ThreadSafeOutputFileStream_h
+#ifndef hep_concurrency_ThreadSafeOutputFileStream_h
+#define hep_concurrency_ThreadSafeOutputFileStream_h
 
 #include "tbb/concurrent_queue.h"
 

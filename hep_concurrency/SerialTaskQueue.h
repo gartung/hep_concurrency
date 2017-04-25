@@ -1,5 +1,5 @@
-#ifndef hc_SerialTaskQueue_h
-#define hc_SerialTaskQueue_h
+#ifndef hep_concurrency_SerialTaskQueue_h
+#define hep_concurrency_SerialTaskQueue_h
 // -*- C++ -*-
 //
 // Package:     Concurrency

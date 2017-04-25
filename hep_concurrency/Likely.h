@@ -1,5 +1,5 @@
-#ifndef hc_Likely_h
-#define hc_Likely_h
+#ifndef hep_concurrency_Likely_h
+#define hep_concurrency_Likely_h
 #include "hep_concurrency/GCCPrerequisite.h"
 
 #if GCC_PREREQUISITE(3,0,0)

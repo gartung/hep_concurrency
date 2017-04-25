@@ -28,6 +28,8 @@ function one_file() {
   # Fix includes 
   perl -wapi\~ -f ${thisdir}/fix-header-locs-to-cmssw.pl "${F}" >/dev/null 2>&1 && rm -f "${F}~"
   perl -pi\~ -e "s/namespace\s+hep_concurrency/namespace edm/"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
+  perl -pi\~ -e "s/\s+hc_/ cms_/"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
+  perl -pi\~ -e "s/\s+HC_/ CMS_/"  "${F}" >/dev/null 2>&1 && rm -f "${F}~"
 
 }
 

@@ -1,5 +1,5 @@
-#ifndef hc_WaitingTask_h
-#define hc_WaitingTask_h
+#ifndef hep_concurrency_WaitingTask_h
+#define hep_concurrency_WaitingTask_h
 // -*- C++ -*-
 //
 // Package:     Concurrency

@@ -1,5 +1,5 @@
-#ifndef hc_ThreadSafeAddOnlyContainer_h
-#define hc_ThreadSafeAddOnlyContainer_h
+#ifndef hep_concurrency_ThreadSafeAddOnlyContainer_h
+#define hep_concurrency_ThreadSafeAddOnlyContainer_h
 
 #include <atomic>
 #include <utility>

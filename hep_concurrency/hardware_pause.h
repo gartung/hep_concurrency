@@ -1,5 +1,5 @@
-#ifndef hc_hardware_pause_h
-#define hc_hardware_pause_h
+#ifndef hep_concurrency_hardware_pause_h
+#define hep_concurrency_hardware_pause_h
 // -*- C++ -*-
 //
 // Package:     Concurrency

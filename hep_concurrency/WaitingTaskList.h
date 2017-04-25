@@ -1,5 +1,5 @@
-#ifndef hc_WaitingTaskList_h
-#define hc_WaitingTaskList_h
+#ifndef hep_concurrency_WaitingTaskList_h
+#define hep_concurrency_WaitingTaskList_h
 // -*- C++ -*-
 //
 // Package:     Concurrency
@@ -167,7 +167,7 @@ namespace hc {
       // ---------- member data --------------------------------
       std::atomic<WaitNode*> m_head;
       std::unique_ptr<WaitNode[]> m_nodeCache;
-      HC_THREAD_GUARD(m_waiting) std::exception_ptr m_exceptionPtr;
+      HEP_CONCURRENCY_THREAD_GUARD(m_waiting) std::exception_ptr m_exceptionPtr;
       unsigned int m_nodeCacheSize;
       std::atomic<unsigned int> m_lastAssignedCacheIndex;
       std::atomic<bool> m_waiting;    
